@@ -4,7 +4,6 @@ import { ethers } from 'ethers';
 async function createWallet() {
   // Generate a new random wallet
   const wallet = ethers.Wallet.createRandom();
-  return wallet;
   
   // Get the private key and mnemonic (seed phrase)
   const privateKey = wallet.privateKey;
@@ -13,6 +12,7 @@ async function createWallet() {
   console.log('Address:', wallet.address);
   console.log('Private Key:', privateKey);
   console.log('Mnemonic (Seed Phrase):', mnemonic);
+  return wallet;
 }
 
 // This is the Ethers.js Appwrite function
@@ -33,7 +33,7 @@ export default async ({ req, res, log, error }) => {
 
   // `res.json()` is a handy helper for sending JSON
   return res.json({
-    address: 'Build like a team of hundreds_',
+    address: wallet.address,
     timestamp: new Date().getTime()
   });
 };
