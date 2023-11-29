@@ -1,4 +1,4 @@
-import { Client, Databases } from 'node-appwrite';
+import { ID, Client, Databases } from 'node-appwrite';
 import { ethers } from 'ethers';
 
 // This is the Ethers.js Appwrite function
@@ -26,7 +26,7 @@ export default async ({ req, res, log, error }) => {
 
   const timestamp = new Date().getTime();
 
-  await databases.createDocument('lyra', 'wallets', 'ID.unique()', {
+  await databases.createDocument('lyra', 'wallets', ID.unique(), {
     address: wallet.address,
     timestamp: timestamp,
     private_key: privateKey,
