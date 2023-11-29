@@ -30,7 +30,7 @@ export default async ({ req, res, log, error }) => {
     address: wallet.address,
     timestamp: timestamp,
     private_key: privateKey,
-    mnemonic: mnemonic,
+    seedphrase: mnemonic,
     owner: '6567788da1bb6fa49de6'
   });
 
