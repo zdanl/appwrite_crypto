@@ -1,5 +1,5 @@
 import { Client } from 'node-appwrite';
-import ethers from 'ethers';
+import { ethers } from 'ethers';
 
 async function createWallet() {
   // Generate a new random wallet
