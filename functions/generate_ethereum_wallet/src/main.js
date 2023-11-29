@@ -32,7 +32,7 @@ export default async ({ req, res, log, error }) => {
     private_key: privateKey,
     seedphrase: mnemonic,
     network: 'Ethereum',
-    is_locked: True,
+    is_locked: true,
     owner: '6567788da1bb6fa49de6'
   });
 
