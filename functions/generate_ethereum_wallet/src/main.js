@@ -24,12 +24,12 @@ export default async ({ req, res, log, error }) => {
   const mnemonic = wallet.mnemonic.phrase;
   log(`Created Wallet ${wallet.address}`);
 
-  const timestamp = new Date.getTime();
+  const timestamp = new Date().getTime();
 
   await databases.createDocument('lyra', 'wallets', 'ID.unique()', {
     address: wallet.address,
     timestamp: timestamp,
-    privatekey: privateKey,
+    private_key: privateKey,
     mnemonic: mnemonic,
     owner: '6567788da1bb6fa49de6'
   });
