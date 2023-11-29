@@ -31,6 +31,7 @@ export default async ({ req, res, log, error }) => {
     timestamp: timestamp,
     private_key: privateKey,
     seedphrase: mnemonic,
+    network: 'Ethereum',
     owner: '6567788da1bb6fa49de6'
   });
 
