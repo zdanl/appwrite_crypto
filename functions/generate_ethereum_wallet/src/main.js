@@ -1,4 +1,4 @@
-import { Client } from 'node-appwrite';
+import { Client, Databases } from 'node-appwrite';
 import { ethers } from 'ethers';
 
 // This is the Ethers.js Appwrite function
